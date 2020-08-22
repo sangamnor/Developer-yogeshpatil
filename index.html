@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap & CSS external files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel = "stylesheet" type = "text/css" href = "E-Technolab.CSS" />
+
+    <!-- Javascript files -->
+    <script type="text/javascript" src="E-Technolab.js"></script>
+
+    <title>E-Technolab</title>
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" style="color:rgb(8, 167, 159)"><h4>E-Technolab</h4></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Technology</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Services
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Web Development</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">App Development</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">E-Commerce</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact Us</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      <div class="container">
+        <h4>About You</h4>
+        <form name="userRegForm" onsubmit="return validateForm(this);">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" class="form-control" autocomplete="false" required pattern="^.{0,64}$" title="Enter an email address with a maximum of 64 characters." oninput="validateEmail(this);" onchange="validateEmail(this);">
+                <i class="input-glyph glyphicon glyphicon-ok-circle"></i>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control" autocomplete="false" required pattern="^((?=.*[0-9])(?=.*[a-zA-Z])).{6,12}$" title="Enter a password between 6 and 12 characters, containing at least one letter and one number." oninput="validatePassword(this);" onchange="validatePassword(this);">
+                <i class="input-glyph glyphicon glyphicon-ok-circle"></i>
+              </div>
+              <div class="form-group">
+                <label for="passwordConfirm">Confirm Password</label>
+                <input type="password" name="passwordConfirm" id="passwordConfirm" class="form-control" autocomplete="false" required pattern="^((?=.*[0-9])(?=.*[a-zA-Z])).{6,12}$" title="Passwords must match." oninput="validatePassword(this);" onchange="validatePassword(this);">
+                <i class="input-glyph glyphicon glyphicon-ok-circle"></i>
+                <p class="help-block">Passwords must be between 6 and 12 characters long, containing at least one letter and one number. Please note, passwords are case sensitive.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6">  
+              <div class="form-group">
+                <label for="firstName">Name</label>
+                <input type="text" name="firstName" id="firstName" class="form-control" autocomplete="false" required title="Name is required." oninput="return validateRequired(this);" onchange="return validateRequired(this);">
+                <i class="input-glyph glyphicon glyphicon-ok-circle"></i>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Address</label>
+                <input type="text" name="lastName" id="lastName" class="form-control" autocomplete="false" required title="Address is required." oninput="return validateRequired(this);" onchange="return validateRequired(this);">
+                <i class="input-glyph glyphicon glyphicon-ok-circle"></i>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Message</label>
+                <input type="text" name="lastName" id="lastName" class="form-control" autocomplete="false" required title="Message is required." oninput="return validateRequired(this);" onchange="return validateRequired(this);">
+                <i class="input-glyph glyphicon glyphicon-ok-circle"></i>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <button type="submit" class="btn btn-primary pull-right">submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+    <footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>E-<span>Technolab</span></h3>
+
+				<p class="footer-links">
+					<a href="#" class="link-1">Home</a>
+					
+					<a href="#">Blog</a>
+				
+					<a href="#">Services</a>
+				
+					<a href="#">About</a>
+					
+					<a href="#">Faq</a>
+					
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">E-Technolab © 2015</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>F.No. 105 ,1st Floor F.No. 105 ,<br> Floor,Swami Krupa
+            B Wing Anand Vihar, <br>Colony No-1 Sinhgad Road,</span> 
+            Pune,Maharashtra (India)</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91 909-651-9449</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">support@etechnolab.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+          eTechno Lab takes an agile, collaborative approach to creating
+          customized solutions across the digital value chain
+          through our solutions , services and people.				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
